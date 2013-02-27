@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\libs\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="NSubstitute">
       <HintPath>..\packages\NSubstitute.1.5.0.0\lib\NET40\NSubstitute.dll</HintPath>
     </Reference>
@@ -45,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExcelDataReader.cs" />
+    <Compile Include="ExcelWriter.cs" />
     <Compile Include="ITestData.cs" />
     <Compile Include="MockDataLoader.cs" />
     <Compile Include="Person.cs" />

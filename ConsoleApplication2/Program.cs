@@ -23,16 +23,20 @@ namespace ConsoleApplication2
             var person = new Person()
                 {
                     Age = 32,
-                    FirstName = "Alex"
+                    FirstName = "Alex",
+                    Balance = 43.4534535m
                 };
 
-            string fullPath = String.Format("{0}\\{1}",  Environment.CurrentDirectory, fileName);
+            var excelWriter = new ExcelWriter();
+            excelWriter.DumpPropertiesToExcel("c:\\temp\\testOutput.xlsx", "output", person);
 
-            var testData = new ExcelDataReader(fullFileName, worksheetName);
-            var asserter = new DataLoadAsserter();
-            var result= asserter.DoesObjectContainValuesMatchingInput(person, testData);
+            //string fullPath = String.Format("{0}\\{1}",  Environment.CurrentDirectory, fileName);
 
-            Console.WriteLine(result);
+            //var testData = new ExcelDataReader(fullFileName, worksheetName);
+            //var asserter = new DataLoadAsserter();
+            //var result= asserter.DoesObjectContainValuesMatchingInput(person, testData);
+
+            //Console.WriteLine(result);
             Console.ReadKey();
         }
 

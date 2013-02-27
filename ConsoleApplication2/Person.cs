@@ -10,6 +10,7 @@ namespace ConsoleApplication2
     {
         public string FirstName { get; set; }
         public int Age;
+        public decimal Balance { get; set; }
     }
 
     public class Address
